@@ -1,0 +1,195 @@
+<!--Rio-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Get Involved</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+
+  </head>  
+  <body>
+
+  <ul>
+  <img src="logo.png" alt="logo" style="width:45px;height:45px;">
+<div class="topnav-right">
+
+  <li class="dropdown">
+    <a href="index.html" class="dropbtn">Home</a>
+</li>
+<li class="dropdown">
+    <a href="whyitmatters.html" class="dropbtn">Why it Matters</a>
+    <div class="dropdown-content">
+      <a href="violence.html">Peace</a>
+      <a href="environment.html">Environment</a>
+    </div>
+</li>
+  
+
+
+<li class="dropdown">
+    <a href="ourplan.html" class="dropbtn">Our Plan</a>
+    <div class="dropdown-content">
+      <a href="implementation.html">Implementation</a>
+      <a href="tech.html">Tech</a>
+    </div>
+</li>
+
+<li class="dropdown">
+    <a href="projects.html" class="dropbtn">Projects</a>
+
+ </li>
+
+<li class="dropdown">
+    <a href="getinvolved.html" class="dropbtn">Get Involved</a>
+    <div class="dropdown-content">
+      <a href="donate.html">Donate</a>
+      <a href="volunteer.html">Volunteer</a>
+    </div>
+</li>
+
+  <li class="dropdown">
+    <a href="about.html" class="dropbtn">About Us</a>
+    <div class="dropdown-content">
+      <a href="founders.html">Founders</a>
+      <a href="ourstory.html">Our Story</a>
+      <a href="faq.html">FAQs</a>
+      <a href= "sources.html">Sources</a>
+    </div>
+ </li>
+ </div>
+</ul>
+   
+    <br>
+ <div class="slideshow-container">
+
+      <div class="mySlides fade">
+
+        <img  src="getinvolved-1.jpg" width="100%" height="500px">
+        <div class="text">Volunteers</div>
+      </div>
+
+      <div class="mySlides fade">
+
+      <img src="getinvolved-2.jpg" width="100%" height="500px">
+        <div class="text">Save Our Forests</div>
+      </div>
+
+      <div class="mySlides fade">
+
+ <img src= "getinvolved-3.jpg" width="100%" height="500px"/>
+        <div class="text">It Starts With You</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <br>
+    
+    <div style="text-align: center;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    
+
+
+       
+    <br>
+     <div class="group">
+    <div class="row-rio">
+  <div class="column-rio">
+<div class="centered">
+
+  <a href="donate.html" class="button">DONATE NOW</a>
+    </div>
+  </div>
+  <div class="column-rio">
+        <div class="centered">
+  <a href="volunteer.html" class="button">VOLUNTEER</a>
+  </div>
+      </div>
+</div>
+    
+      
+    </div>
+   
+<div class="footer">
+        <h8>Contact Us</h8>
+        <br>
+        <br>
+        <p8><a href="https://www.google.com/maps/place/146+Glendonwynne+Rd,+Toronto,+ON+M6P+3J7/@43.6565325,-79.4766472,17z/data=!3m1!4b1!4m5!3m4!1s0x882b36831570c2b5:0x32f2749db9f434bd!8m2!3d43.6565325!4d-79.4744585">146 Glendonwynne Rd</a></p8>
+        <br>
+        <p8>Toronto, ON</p8>
+        <br>
+        <p8>M6P 3J7</p8>
+        <br>
+        <p8>reforestnation2.0@gmail.com</p8>
+        <br>
+        <br>
+        <h8>Follow Us</h8>
+        <br>
+        <a href="https://www.instagram.com/reforestnation2.0/?hl=en" target="_blank"><img src="instagram.png" alt="instagram" style="width:35px;height:35px;"></a>
+        <a href="https://www.facebook.com/reforest.nation.12" target="_blank"><img src="facebook.png" alt="facebook" style="width:60px;height:35px;"></a>
+        <a href="https://twitter.com/Reforestnation2" target="_blank"><img src="twitter.png" alt="twitter" style="width:40px;height:40px;"></a>
+        <a href="https://www.youtube.com/channel/UCQtNGibx0Qh2y_O6E3ENlEw?view_as=public" target="_blankimg"><img src="youtube.png" alt="youtube" style="width:40px;height:50px;"></a>
+    </div>
+    </body>
+<script>var slideIndex = 1;
+
+var myTimer;
+
+window.addEventListener("load",function() {
+  showSlides(slideIndex);
+  myTimer = setInterval(function(){plusSlides(1)}, 4000);
+})
+
+
+
+// NEXT AND PREVIOUS CONTROL
+function plusSlides(n){
+  clearInterval(myTimer);
+  if (n < 0){
+    showSlides(slideIndex -= 1);
+  } else {
+    showSlides(slideIndex += 1); 
+  }
+  if (n === -1){
+    myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+  } else {
+    myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  }
+}
+
+//Controls the current slide and resets interval if needed
+function currentSlide(n){
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</html>
+
+
+      
