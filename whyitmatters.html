@@ -1,0 +1,181 @@
+<!--Katrina-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Why it Matters</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <ul>
+        <img src="logo.png" alt="logo" style="width:45px;height:45px;">
+        <div class="topnav-right">
+
+            <li class="dropdown">
+                <a href="index.html" class="dropbtn">Home</a>
+            </li>
+            <li class="dropdown">
+                <a href="whyitmatters.html" class="dropbtn">Why it Matters</a>
+                <div class="dropdown-content">
+                    <a href="violence.html">Peace</a>
+                    <a href="environment.html">Environment</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="ourplan.html" class="dropbtn">Our Plan</a>
+                <div class="dropdown-content">
+                    <a href="implementation.html">Implementation</a>
+                    <a href="tech.html">Tech</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="projects.html" class="dropbtn">Projects</a>
+
+            </li>
+
+            <li class="dropdown">
+                <a href="getinvolved.html" class="dropbtn">Get Involved</a>
+                <div class="dropdown-content">
+                    <a href="donate.html">Donate</a>
+                    <a href="volunteer.html">Volunteer</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="about.html" class="dropbtn">About Us</a>
+                <div class="dropdown-content">
+                    <a href="founders.html">Founders</a>
+                    <a href="ourstory.html">Our Story</a>
+                    <a href="faq.html">FAQs</a>
+                </div>
+            </li>
+        </div>
+    </ul>
+    <br>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+
+            <img src="why-pollution.jpg" width="100%" height="500px">
+            <div class="text">Air Pollution</div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="why-peace.png" width="100%" height="500px">
+            <div class="text">Women Taking Part in Peacekeeping</div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="why-community.png" width="100%" height="500px"/>
+            <div class="text">Community Building</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <br>
+
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <h></h>
+    <p class="solid">
+        Here at Reforestnation, we have two goals. The first goal is to take action against environmental problems like climate change. Our second goal is to create peace and justice around the world.
+    </p>
+    <p class="solid">Want to know why these issues matter? Click Below To Learn More</p>
+    <div class="centered">
+        <a href="violence.html" class="button1">PEACE</a>
+
+        <a href="environment.html" class="button1">ENVIRONMENT</a>
+    </div>
+
+    <div class="footer">
+        <h8>Contact Us</h8>
+        <br>
+        <br>
+        <p8><a href="https://www.google.com/maps/place/146+Glendonwynne+Rd,+Toronto,+ON+M6P+3J7/@43.6565325,-79.4766472,17z/data=!3m1!4b1!4m5!3m4!1s0x882b36831570c2b5:0x32f2749db9f434bd!8m2!3d43.6565325!4d-79.4744585">146 Glendonwynne Rd</a></p8>
+        <br>
+        <p8>Toronto, ON</p8>
+        <br>
+        <p8>M6P 3J7</p8>
+        <br>
+        <p8>reforestnation2.0@gmail.com</p8>
+        <br>
+        <br>
+        <h8>Follow Us</h8>
+        <br>
+        <a href="https://www.instagram.com/reforestnation2.0/?hl=en" target="_blank"><img src="instagram.png" alt="instagram" style="width:35px;height:35px;"></a>
+        <a href="https://www.facebook.com/reforest.nation.12" target="_blank"><img src="facebook.png" alt="facebook" style="width:35px;height:35px;"></a>
+        <a href="https://twitter.com/Reforestnation2" target="_blank"><img src="twitter.png" alt="twitter" style="width:40px;height:40px;"></a>
+        <a href="https://www.youtube.com/channel/UCQtNGibx0Qh2y_O6E3ENlEw?view_as=public" target="_blankimg"><img src="youtube.png" alt="youtube" style="width:50px;height:50px;"></a>
+    </div>
+</body>
+<!-- import the webpage's javascript file -->
+<script>
+var slideIndex = 1;
+
+var myTimer;
+
+window.addEventListener("load",function() {
+  showSlides(slideIndex);
+  myTimer = setInterval(function(){plusSlides(1)}, 4000);
+})
+
+
+
+// NEXT AND PREVIOUS CONTROL
+function plusSlides(n){
+  clearInterval(myTimer);
+  if (n < 0){
+    showSlides(slideIndex -= 1);
+  } else {
+    showSlides(slideIndex += 1); 
+  }
+  if (n === -1){
+    myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+  } else {
+    myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  }
+}
+
+//Controls the current slide and resets interval if needed
+function currentSlide(n){
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</html>
